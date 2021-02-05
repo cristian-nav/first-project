@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Test</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="{% static 'js/script.js' %}copy"></script>
+    </head>
+    <body>
+        <h1>Info del servidor:</h1>
+        <p>Nombre: {{name}}</p>
+        <p>Color: {{favorite_color}}</p>
+        <p>Mascotas</p>
+        <ul>
+            {% for pet in pets %}
+                <li>{{pet}}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
